@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  scroll-padding-top: 100px;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $text-color;
+  text-decoration: underline;
+}
+
+
+.colored {
+  background-color: #f1f1f1;
+}
+
+.black {
+  color: $text-color;
+}
+
+.white {
+  color: $white;
+}
+
+.brand-color {
+  color: $brand-color;
+}
+
+h1{
+  font-style: normal;
+font-weight: 700;
+font-size: 110px;
+line-height: 115px;
+color: $white;
+
+}
+h2 {
+  font-style: normal;
+ font-weight: 700;
+ font-size: 55px;
+ line-height: 60px;
+ color: #FFFFFF;
+ font-family: $headline-font-stack;
+}
+
+h3,
+legend {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 6px;
+  color: $white;
+  font-family: $headline-font-stack;
+}
+
+
+p,label {
+  font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 36px;
+  color: #A7A7A7;
+}
+
+hr {
+  background-color: $mid-grey;
+  opacity: 1;
+}
+body{
+  background: #000000;
+  margin: 0 20px;
+}

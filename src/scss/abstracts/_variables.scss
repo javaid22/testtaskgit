@@ -1,0 +1,130 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$alternative-font-stack: 'Arial',
+sans-serif;
+
+/// Regular font family
+/// @type List
+$regular-font-stack: ('Inter', $alternative-font-stack) !default;
+
+/// Headline font family
+/// @type List
+$headline-font-stack: ('Inter', $alternative-font-stack) !default;
+
+/// font public path
+/// @type String
+$font-path: '../assets/fonts/' !default;
+
+/// Material Icons font family
+/// @type String
+$MIcons-font-stack: 'Material Icons' !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(0, 0, 0) !default;
+
+/// text light color
+/// @type Color
+$text-light: rgb(81, 81, 81) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(226, 0, 26) !default;
+
+/// white color
+/// @type Color
+$white: rgb(255, 255, 255) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(236, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(217, 218, 219) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(135, 136, 138) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer / 4,
+        2: $spacer / 2,
+        3: $spacer, //16px
+        4: $spacer * 1.5, //24px
+        5: $spacer * 3, //48px
+        6: $spacer * 5, //80px
+        7: $spacer * 6.25, //100px
+        8: $spacer * 7.5, //120px
+        9: $spacer * 9.375, //150px
+        10: $spacer * 10, //160px
+        11: $spacer * 11.25, //180px
+        12: $spacer * 12.5, //200px
+        13: $spacer * 13.75, //220px
+        14: $spacer * 14.375, //230px
+        15: $spacer * 15.625, //250px
+        16: $spacer * 16.875, //270px
+        17: $spacer * 17.5, //280px
+        18: $spacer * 18.75, //300px
+);
+
+/*-----mobile-screens-----*/
+
+  
+    $xl-screen:    1660px;
+    $ipad-pro:     1025px;
+    $ipad:         770px;
+    $surface-duo:  600px;
+    $iphonex:      478px;
+    $andriod:      380px;
+
+    @mixin xl {
+        @media (max-width:$xl-screen) {
+                @content ;       
+            }    
+        }
+        @mixin ipad-pro {
+            @media (max-width:$ipad-pro) {
+                @content ;       
+            }    
+        }
+        @mixin ipad {
+            @media (max-width:$ipad) {
+                @content ;       
+            }    
+        }
+        @mixin surface {
+            @media (max-width:$surface-duo) {
+                @content ;       
+            }    
+        }
+        @mixin iphonx {
+            @media (max-width:$iphonex) {
+                @content ;       
+            }    
+        }
+        @mixin andriod {
+            @media (max-width:$andriod) {
+                @content ;       
+            }    
+        }
